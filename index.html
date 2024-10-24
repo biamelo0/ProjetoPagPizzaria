@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzas da Nonna</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/0cf6585b12.js" crossorigin="anonymous"></script>
+</head>
+<body>
+        <header class="header">
+            <ul>
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#Cardapio">Cardápio</a></li>
+                <li><a href="#Contato">Contato</a></li>      
+            </ul>
+            <i id="verCarrinho" onclick="mostrarCarrinho()" class="fas fa-shopping-cart"></i>
+        </header>
+
+        <section class="heroSection">
+            <div class="imagem">
+                <img src="img/image-removebg-preview (1).png" alt="">
+            </div>
+            <div class="mensagem">
+                <h1>SINTA O CALOR DO NOSSO FORNO E O SABOR DA TRADIÇÃO 
+                    EM CADA MORDIDA !</h1>
+
+                <p>A felicidade está a um pedaço de distância. Peça já a sua!</p>
+                <div class="seta">
+                    <h4>R. Dr. Virgílio de Rezende, 777 - Centro, Itapetininga - SP, 18200-046</h4>
+                </div>
+            </div>
+        </section>
+
+        <div class="promo">
+            <img src="img/image copy.png" alt="">
+        </div>
+
+    <div class="container">
+        <h2>Produtos em destaque</h2>
+        <div id="produtos-container" class="produtos-container">
+            <div class="card">
+                <img src="img/image copy 2.png" alt="Pizza de Pão de Alho">
+                <h3>Pizza de Pão de Alho</h3>
+                <h5>Queijo, pão ciabatta, pasta de alho, parmesão ralado e orégano.</h5>
+                <p>R$ 50.00</p>
+                <button class="adicionarCarrinho" onclick="adicionar('Pizza de Pão de Alho', 50)">
+                    Peça já
+                </button>
+            </div>
+            <div class="card">
+                <img src="img/image copy 3.png" alt="La Bianca">
+                <h3>La Bianca</h3>
+                <h5>Queijo, muçarela de vaca e búfala, requeijão, parmesão ralado, orégano e manjericão.</h5>
+                <p>R$ 45.00</p>
+                <button class="adicionarCarrinho" onclick="adicionar('La Bianca', 45)">
+                    Peça já
+                </button>
+            </div>
+            <div class="card">
+                <img src="img/image copy 4.png" alt="Carne Seca com Cream Cheese">
+                <h3>Carne Seca com Cream Cheese</h3>
+                <h5>Queijo, cebola, carne seca desfiada, cream cheese e orégano.</h5>
+                <p>R$ 65.00</p>
+                <button class="adicionarCarrinho" onclick="adicionar('Carne Seca com Cream Cheese', 65)">
+                    Peça já
+                </button>
+            </div>
+            <div class="card">
+                <img src="img/image copy 5.png" alt="América">
+                <h3>América</h3>
+                <h5>Queijo, pepperoni, champignon, cebola, oregano e pimentão verde.</h5>
+                <p>R$ 55.00</p>
+                <button class="adicionarCarrinho" onclick="adicionar('América', 55)">
+                    Peça já
+                </button>
+            </div>
+            <div class="card">
+                <img src="img/image copy 6.png" alt="Extravaganzza®">
+                <h3>Extravaganzza®</h3>
+                <h5>Queijo, pepperoni, presunto, azeitona preta, champignon, cebola, oregano e pimentão verde.</h5>
+                <p>R$ 65.00</p>
+                <button class="adicionarCarrinho" onclick="adicionar('Extravaganzza®', 65)">
+                    Peça já
+                </button>
+            </div>
+            <div class="card">
+                <img src="img/image copy 7.png" alt="Produto 3">
+                <h3>Veggie®</h3>
+                <h5>Queijo, champignon, azeitona preta, cebola, oregano e pimentão verde.</h5>
+                <p> R$ 30.00</p>
+                <button class="adicionarCarrinho" onclick="adicionar('Produto 3', 30)">
+                    Peça já
+                </button>
+            </div>
+            
+        </div>
+        <h2>Cardápio</h2>
+    </div>
+
+   
+
+    <section class="cardapio" id="Cardapio">
+        
+        <div class="card">
+            <img src="img/image copy 8.png" alt="3 queijos">
+            <h3>3 queijos</h3>
+            <h5>Queijo, requeijão, oregano e parmesão ralado.</h5>
+            <p> R$ 35.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('3 queijos', 35)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 9.png" alt="Calabresa">
+            <h3>Calabresa</h3>
+            <h5>Queijo, calabresa e cebola, oregano.</h5>
+            <p>R$ 40.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Calabresa', 40)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 7.png" alt="Produto 3">
+            <h3>Veggie®</h3>
+            <h5>Queijo, champignon, azeitona preta, cebola, oregano e pimentão verde.</h5>
+            <p> R$ 30.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Produto 3', 30)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 2.png" alt="Pizza de Pão de Alho">
+            <h3>Pizza de Pão de Alho</h3>
+            <h5>Queijo, pão ciabatta, pasta de alho, parmesão ralado e orégano.</h5>
+            <p>R$ 50.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Pizza de Pão de Alho', 50)">
+                Peça já
+            </button>
+        </div>
+        <div class="card">
+            <img src="img/image copy 3.png" alt="La Bianca">
+            <h3>La Bianca</h3>
+            <h5>Queijo, muçarela de vaca e búfala, requeijão, parmesão ralado, orégano e manjericão.</h5>
+            <p>R$ 45.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('La Bianca', 45)">
+                Peça já
+            </button>
+        </div>
+        <div class="card">
+            <img src="img/image copy 4.png" alt="Carne Seca com Cream Cheese">
+            <h3>Carne Seca com Cream Cheese</h3>
+            <h5>Queijo, cebola, carne seca desfiada, cream cheese e orégano.</h5>
+            <p>R$ 65.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Carne Seca com Cream Cheese', 65)">
+                Peça já
+            </button>
+        </div>
+        <div class="card">
+            <img src="img/image copy 5.png" alt="América">
+            <h3>América</h3>
+            <h5>Queijo, pepperoni, champignon, cebola, oregano e pimentão verde.</h5>
+            <p>R$ 55.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('América', 55)">
+                Peça já
+            </button>
+        </div>
+        <div class="card">
+            <img src="img/image copy 6.png" alt="Extravaganzza®">
+            <h3>Extravaganzza®</h3>
+            <h5>Queijo, pepperoni, presunto, azeitona preta, champignon, cebola, oregano e pimentão verde.</h5>
+            <p>R$ 65.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Extravaganzza®', 65)">
+                Peça já
+            </button>
+        </div>
+        <div class="card">
+            <img src="img/image copy 10.png" alt="Pizza de queijo">
+            <h3>Pizza de queijo</h3>
+            <h5>Queijo e oregano.</h5>
+            <p>R$ 30.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Pizza de queijo', 30)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 11.png" alt="Margherita">
+            <h3>Margherita</h3>
+            <h5>Queijo, tomate, oregano e manjericão.</h5>
+            <p>R$ 40.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Margherita', 40)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 12.png" alt="Pepperoni">
+            <h3>Pepperoni</h3>
+            <h5>Queijo, oregano e pepperoni.</h5>
+            <p>P R$ 45.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Pepperoni', 45)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 13.png" alt="Frango com requeijão especial">
+            <h3>Frango com requeijão especial</h3>
+            <h5>Frango desfiado, cebola, oregano e requeijão</h5>
+            <p>R$ 45.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Frango com requeijão especial', 45)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 14.png" alt="Cheddar">
+            <h3>Cheddar</h3>
+            <h5>Queijo, molho sabor queijo cheddar e orégano.</h5>
+            <p>R$ 45.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Cheddar', 45)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 17.png" alt="Bauru">
+            <h3>Bauru</h3>
+            <h5>Queijo, presunto, requeijão, oregano e tomate.</h5>
+            <p>R$ 40.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Bauru', 40)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 15.png" alt="Catuperoni">
+            <h3>Catuperoni</h3>
+            <h5>Queijo, pepperoni, requeijão, oregano e parmesão ralado.</h5>
+            <p> R$ 50.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Catuperoni', 50)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 16.png" alt="Cheddar & Pepperoni">
+            <h3>Cheddar & Pepperoni</h3>
+            <h5>Queijo, molho sabor queijo cheddar, pepperoni e orégano.</h5>
+            <p>R$ 55.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Cheddar & Pepperoni', 55)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 18.png" alt="Corn & Bacon">
+            <h3>Corn & Bacon</h3>
+            <h5>Queijo, bacon, oregano e milho.</h5>
+            <p> R$ 40.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Corn & Bacon', 40)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 19.png" alt="Presunto">
+            <h3>Presunto</h3>
+            <h5>QQueijo, oregano e presunto.</h5>
+            <p>R$ 30.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Presunto', 30)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 20.png" alt="Napolitana">
+            <h3>Napolitana</h3>
+            <h5>Queijo, tomate, oregano e parmesão ralado.</h5>
+            <p> R$ 35.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Napolitana', 35)">
+                Peça já
+            </button>
+        </div>
+
+        <div class="card">
+            <img src="img/image copy 21.png" alt="Meat & Bacon">
+            <h3>Meat & Bacon</h3>
+            <h5>Queijo, bacon, calabresa, pepperoni, oregano e presunto.</h5>
+            <p>R$ 60.00</p>
+            <button class="adicionarCarrinho" onclick="adicionar('Meat & Bacon', 60)">
+                Peça já
+            </button>
+        </div>
+        
+    </section>
+
+    <div class="contato" id="Contato">
+        <p>(15)1245-5435 / 3248-5954 / CNPJ 14.380.200/0001-21 / Avenida dos Autonomistas, nº 1496, Vila Yara, Osasco/SP - CEP 06.020-902</p>
+    </div>
+
+
+<script src="js/script.js"></script>
+<script type="module" src="js/imports.js"></script>
+
+</body>
+</html>
