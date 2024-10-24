@@ -37,6 +37,9 @@ ul{
     height: 70px;
     display: flex;
     align-items: center;
+    position: fixed;
+    padding-left: 760px;
+    padding-right: 500px;
 }
 
 .header i{
@@ -138,6 +141,7 @@ body img{
     width: 30%;
     align-items: center;
     padding-left: 20px;
+    padding-top: 100px;
 }
 
 .imagem img{
@@ -145,6 +149,7 @@ body img{
 }
 
 .imagem{
+    padding-top: 100px;
     padding-left: 150px;
 }
 
@@ -186,5 +191,5 @@ h2{
     padding-bottom: 20px;
     align-items: center;
     justify-content: center;
-    padding-left: 100px;
+    padding-left: 130px;
 }
